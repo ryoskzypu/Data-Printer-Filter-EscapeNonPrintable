@@ -1,3 +1,6 @@
+[![CI](https://github.com/ryoskzypu/Data-Printer-Filter-EscapeNonPrintable/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/ryoskzypu/Data-Printer-Filter-EscapeNonPrintable/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ryoskzypu/Data-Printer-Filter-EscapeNonPrintable/badge.svg?branch=main)](https://coveralls.io/github/ryoskzypu/Data-Printer-Filter-EscapeNonPrintable?branch=main)
+
 # Data::Printer::Filter::EscapeNonPrintable
 
 This module is a filter plugin for [Data::Printer](https://metacpan.org/pod/Data::Printer).
