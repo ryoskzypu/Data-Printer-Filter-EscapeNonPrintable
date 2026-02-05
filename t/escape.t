@@ -8,15 +8,11 @@ use v5.26.0;
 use strict;
 use warnings;
 
-use Test2::V1 qw<
-    subtest
-    is
-    note
->;
+use Test2::V1 qw< subtest is >;
 
 use Data::Printer ();
 
-subtest q{Test escaping of missing chars} => sub {
+subtest 'Test escaping of missing chars' => sub {
     my $ddp = Data::Printer::Object->new(
         colored       => 0,
         print_escapes => 1,
@@ -34,7 +30,7 @@ subtest q{Test escaping of missing chars} => sub {
         'escaped missing chars (ASCII control chars + DEL)',
     );
 
-    note($parsed);
+    T2->note($parsed);
 };
 
 subtest 'Test colors from escaped missing chars' => sub {
