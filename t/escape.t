@@ -10,7 +10,8 @@ use warnings;
 
 use Test2::V1 qw< subtest is >;
 
-use Data::Printer ();
+use Data::Printer::Object;
+use Data::Printer::Filter;
 
 subtest 'Test escaping of missing chars' => sub {
     my $ddp = Data::Printer::Object->new(
