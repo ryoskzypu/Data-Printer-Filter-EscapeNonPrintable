@@ -38,6 +38,10 @@ subtest q{Test escaping of missing chars} => sub {
 };
 
 subtest 'Test colors from escaped missing chars' => sub {
+    # Make sure color output is consistent, because DDP changes its colors theme
+    # depth based on TTY environment variables.
+    local $ENV{COLORTERM} = 'truecolor';
+
     my %TESTS = (
         A => {
             got      => "foo\x{0b}bar\x{7f}",
