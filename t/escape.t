@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!perl
 #
 # Test if DDP's missing chars (ASCII control chars + DEL) get escaped and colorized correctly.
 # Based on https://github.com/garu/Data-Printer/blob/379f0cecc3c1ec0bfb10b38b780f940bb2865c66/t/002-scalar.t#L151.
