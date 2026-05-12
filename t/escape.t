@@ -20,10 +20,10 @@ subtest 'Test escaping of missing chars' => sub {
         filters       => [ qw< EscapeNonPrintable > ],
     );
 
-    my $missing_chars =
+    my $MISSING_CHARS =
       "\x{01}\x{02}\x{03}\x{04}\x{05}\x{06}\x{0b}\x{0e}\x{0f}\x{10}\x{11}\x{12}\x{13}\x{14}\x{15}\x{16}\x{17}\x{18}\x{19}\x{1a}\x{1c}\x{1d}\x{1e}\x{1f}\x{7f}";
 
-    my $parsed = $ddp->parse( \$missing_chars );
+    my $parsed = $ddp->parse( \$MISSING_CHARS );
 
     is(
         $parsed,
@@ -80,8 +80,8 @@ subtest 'Test decoration' => sub {
         print_escapes => 1,
     );
 
-    my $ref = \"foo\x{0b}bar\x{7f}";
-    my $str = Data::Printer::Filter::EscapeNonPrintable::parse( $ref, $ddp );
+    my $REF = \"foo\x{0b}bar\x{7f}";
+    my $str = Data::Printer::Filter::EscapeNonPrintable::parse( $REF, $ddp );
 
     is(
         $str, q{"foo\vbar\177"},
